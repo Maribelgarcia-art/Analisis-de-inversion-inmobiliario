@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6a7675aa24d9a0e4df386e7ef714462a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6a7675aa24d9a0e4df386e7ef714462a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6a7675aa24d9a0e4df386e7ef714462a = L.map(
+                "map_6a7675aa24d9a0e4df386e7ef714462a",
+                {
+                    center: [41.3851, 2.1734],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_6a7675aa24d9a0e4df386e7ef714462a);
+
+            
+
+        
+    
+            var tile_layer_1d445a4889f0065d9e8fe650580c05d1 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1d445a4889f0065d9e8fe650580c05d1.addTo(map_6a7675aa24d9a0e4df386e7ef714462a);
+        
+    
+            var measure_control_83f55cc26c96135668d06347a47e9739 = new L.Control.Measure(
+                {
+  "position": "topleft",
+  "primaryLengthUnit": "meters",
+  "secondaryLengthUnit": "kilometers",
+  "primaryAreaUnit": "sqmeters",
+  "secondaryAreaUnit": "acres",
+});
+            map_6a7675aa24d9a0e4df386e7ef714462a.addControl(measure_control_83f55cc26c96135668d06347a47e9739);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+            var choropleth_7b4b2b3202e74ee29126e29eae6d2491 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_510991a6c5e97f19a8e982b29cbeb76e_styler(feature) {
+            switch(feature.properties.neighbourhood) {
+                default:
+                    return {"color": "black", "fillColor": "lightgray", "fillOpacity": 0.7, "opacity": 0.3, "weight": 1};
+            }
+        }
+
+        function geo_json_510991a6c5e97f19a8e982b29cbeb76e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_510991a6c5e97f19a8e982b29cbeb76e = L.geoJson(null, {
+                onEachFeature: geo_json_510991a6c5e97f19a8e982b29cbeb76e_onEachFeature,
+            
+                style: geo_json_510991a6c5e97f19a8e982b29cbeb76e_styler,
+            ...{
+}
+        });
+
+        function geo_json_510991a6c5e97f19a8e982b29cbeb76e_add (data) {
+            geo_json_510991a6c5e97f19a8e982b29cbeb76e
+                .addData(data);
+        }
+            geo_json_510991a6c5e97f19a8e982b29cbeb76e_add({"features": [{"geometry": {"coordinates": [[[2.1934, 41.3751], [2.2133999999999996, 41.3751], [2.2133999999999996, 41.3951], [2.1934, 41.3951], [2.1934, 41.3751]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 6.9963209507789, "ROI (%)": 11.075448519014383, "cluster": 1, "competencia": 57, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.29755748607337384, "indice_oportunidad": 62.1162985522473, "neighbourhood": "EL RAVAL", "ocupacion": 0.7090931317527976, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 5142.822814515021, "precio_medio": 189.11085072244293, "reviews_score": 4.818014765922493, "roi_prevision_1y": 7.275089486957047, "roi_prevision_3y": 7.785432083336065}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1927444280220145, 41.381337350724536], [2.212744428022014, 41.381337350724536], [2.212744428022014, 41.40133735072453], [2.1927444280220145, 41.40133735072453], [2.1927444280220145, 41.381337350724536]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 11.60571445127933, "ROI (%)": 6.705241236872915, "cluster": 2, "competencia": 140, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.17152908368853154, "indice_oportunidad": 97.85670660275416, "neighbourhood": "EL G\u00d3TICO", "ocupacion": 0.6710164073434198, "perfil_inversion": "Bajo rendimiento/Bajo riesgo", "precio_m2": 4751.933032686774, "precio_medio": 246.01168437039684, "reviews_score": 4.860730583256343, "roi_prevision_1y": 12.222742682130733, "roi_prevision_3y": 12.411468976821482}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.190806363729278, 41.38730209929228], [2.2108063637292776, 41.38730209929228], [2.2108063637292776, 41.407302099292274], [2.190806363729278, 41.407302099292274], [2.190806363729278, 41.38730209929228]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 9.85595153449124, "ROI (%)": 5.650515929852795, "cluster": 2, "competencia": 157, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.24658751383314398, "indice_oportunidad": 82.85042021449047, "neighbourhood": "LA BARCELONETA", "ocupacion": 0.510167650697638, "perfil_inversion": "Bajo rendimiento/Bajo riesgo", "precio_m2": 4791.031947043047, "precio_medio": 265.45209217801596, "reviews_score": 4.00695213053119, "roi_prevision_1y": 10.391499775563192, "roi_prevision_3y": 10.418668135192167}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1876705098312486, 41.392733557568775], [2.207670509831248, 41.392733557568775], [2.207670509831248, 41.41273355756877], [2.1876705098312486, 41.41273355756877], [2.1876705098312486, 41.392733557568775]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.789267873576293, "ROI (%)": 14.488855372533333, "cluster": 2, "competencia": 161, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.3976682092226249, "indice_oportunidad": 75.79047882368964, "neighbourhood": "SANT PERE", "ocupacion": 0.5431565707973218, "perfil_inversion": "Bajo rendimiento/Bajo riesgo", "precio_m2": 3090.612545205261, "precio_medio": 379.2841669664187, "reviews_score": 4.510747302577566, "roi_prevision_1y": 9.482037044700276, "roi_prevision_3y": 9.577475201783676}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.183473918190766, 41.39739434476432], [2.2034739181907654, 41.39739434476432], [2.2034739181907654, 41.41739434476432], [2.183473918190766, 41.41739434476432], [2.183473918190766, 41.39739434476432]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.248149123539492, "ROI (%)": 14.656320330745594, "cluster": 3, "competencia": 63, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.38837596970085175, "indice_oportunidad": 47.12948748599364, "neighbourhood": "EL FORT PIENC", "ocupacion": 0.5125716742746937, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 5402.7943109360995, "precio_medio": 325.7713717176346, "reviews_score": 4.4174110031487785, "roi_prevision_1y": 5.376837809255515, "roi_prevision_3y": 5.537200661884246}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1784000000000003, 41.40108076211354], [2.1984, 41.40108076211354], [2.1984, 41.42108076211353], [2.1784000000000003, 41.42108076211353], [2.1784000000000003, 41.40108076211354]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.247956162689621, "ROI (%)": 13.08397348116461, "cluster": 3, "competencia": 129, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.2232243167409557, "indice_oportunidad": 49.14009059544315, "neighbourhood": "SAGRADA FAM\u00cdLIA", "ocupacion": 0.7545641645055121, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 2598.1489372077194, "precio_medio": 167.77198834779495, "reviews_score": 4.22210781047073, "roi_prevision_1y": 5.449172359320454, "roi_prevision_3y": 5.975646763902294}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1726705098312484, 41.403631695488855], [2.192670509831248, 41.403631695488855], [2.192670509831248, 41.42363169548885], [2.1726705098312484, 41.42363169548885], [2.1726705098312484, 41.403631695488855]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 4.464668897345596, "ROI (%)": 8.046137691733707, "cluster": 3, "competencia": 170, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.3170160922219597, "indice_oportunidad": 40.715964355096055, "neighbourhood": "DRETA DE L\u0027EIXAMPLE", "ocupacion": 0.6257423924305306, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 4586.85709380027, "precio_medio": 324.3062977046096, "reviews_score": 4.1198653673336825, "roi_prevision_1y": 4.605103547868735, "roi_prevision_3y": 4.700232316455837}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1665358538980297, 41.40493565686105], [2.1865358538980293, 41.40493565686105], [2.1865358538980293, 41.424935656861045], [2.1665358538980297, 41.424935656861045], [2.1665358538980297, 41.40493565686105]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 10.92940916619948, "ROI (%)": 5.976721140063839, "cluster": 2, "competencia": 161, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.303525630735504, "indice_oportunidad": 91.3009206030423, "neighbourhood": "L\u0027ANTIGA ESQUERRA DE L\u0027EIXAMPLE", "ocupacion": 0.7034282764658811, "perfil_inversion": "Bajo rendimiento/Bajo riesgo", "precio_m2": 6190.455625809978, "precio_medio": 271.11882896877626, "reviews_score": 4.337615171403628, "roi_prevision_1y": 11.324053643230831, "roi_prevision_3y": 12.108544754004596}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1602641461019707, 41.40493565686105], [2.1802641461019703, 41.40493565686105], [2.1802641461019703, 41.424935656861045], [2.1602641461019707, 41.424935656861045], [2.1602641461019707, 41.40493565686105]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.80892009394567, "ROI (%)": 11.842330265121568, "cluster": 1, "competencia": 125, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.3545330472743582, "indice_oportunidad": 77.79293350005936, "neighbourhood": "LA NOVA ESQUERRA DE L\u0027EIXAMPLE", "ocupacion": 0.8630265895704372, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 3009.4636748693115, "precio_medio": 249.23084997705308, "reviews_score": 4.94290970391252, "roi_prevision_1y": 9.241585993966588, "roi_prevision_3y": 9.635614449935876}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.154129490168752, 41.403631695488855], [2.1741294901687516, 41.403631695488855], [2.1741294901687516, 41.42363169548885], [2.154129490168752, 41.42363169548885], [2.154129490168752, 41.403631695488855]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 9.664580622368364, "ROI (%)": 9.401524937396013, "cluster": 3, "competencia": 84, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.20018472744223367, "indice_oportunidad": 83.41206930277971, "neighbourhood": "SANT ANTONI", "ocupacion": 0.59971689165955, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 3433.702270397228, "precio_medio": 345.87572166306506, "reviews_score": 4.323202932020755, "roi_prevision_1y": 10.07398397125143, "roi_prevision_3y": 10.79729472997669}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1484, 41.40108076211354], [2.1683999999999997, 41.40108076211354], [2.1683999999999997, 41.42108076211353], [2.1484, 41.42108076211353], [2.1484, 41.40108076211354]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 4.16467595436642, "ROI (%)": 6.220382348447789, "cluster": 3, "competencia": 122, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.33594833902421756, "indice_oportunidad": 39.443621349590124, "neighbourhood": "EL POBLE SEC", "ocupacion": 0.6641531692142519, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 4099.651365087641, "precio_medio": 377.3249641871963, "reviews_score": 4.518790621743366, "roi_prevision_1y": 4.346595197126649, "roi_prevision_3y": 4.509574704444062}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1433260818092346, 41.39739434476432], [2.163326081809234, 41.39739434476432], [2.163326081809234, 41.41739434476432], [2.1433260818092346, 41.41739434476432], [2.1433260818092346, 41.39739434476432]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 11.759278817295954, "ROI (%)": 9.951769101112703, "cluster": 0, "competencia": 173, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.49155714331000366, "indice_oportunidad": 100.0, "neighbourhood": "LA MARINA", "ocupacion": 0.8022204554172194, "perfil_inversion": "Alto rendimiento/Alto riesgo", "precio_m2": 3496.524345883801, "precio_medio": 369.84600893371487, "reviews_score": 4.703018958895178, "roi_prevision_1y": 12.590104655823419, "roi_prevision_3y": 12.529560518099341}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.139129490168752, 41.392733557568775], [2.1591294901687514, 41.392733557568775], [2.1591294901687514, 41.41273355756877], [2.139129490168752, 41.41273355756877], [2.139129490168752, 41.392733557568775]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 10.659541126403374, "ROI (%)": 5.343885211152184, "cluster": 0, "competencia": 175, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.294696861183782, "indice_oportunidad": 90.98434290194595, "neighbourhood": "LA FONT DE LA GUATLLA", "ocupacion": 0.591519266196649, "perfil_inversion": "Alto rendimiento/Alto riesgo", "precio_m2": 2449.336568933867, "precio_medio": 237.05868575830212, "reviews_score": 4.363629602379294, "roi_prevision_1y": 11.467545110866254, "roi_prevision_3y": 12.239115515576595}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1359936362707224, 41.38730209929228], [2.155993636270722, 41.38730209929228], [2.155993636270722, 41.407302099292274], [2.1359936362707224, 41.407302099292274], [2.1359936362707224, 41.38730209929228]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.698712885426209, "ROI (%)": 14.093204020787821, "cluster": 3, "competencia": 113, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.46243951508742165, "indice_oportunidad": 51.336994451902875, "neighbourhood": "HOSTAFRANCS", "ocupacion": 0.5307919639315172, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 4068.5629748060273, "precio_medio": 276.8090718111589, "reviews_score": 4.971782082720961, "roi_prevision_1y": 5.836764021867583, "roi_prevision_3y": 6.4617326455233615}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.134055571977986, 41.381337350724536], [2.1540555719779855, 41.381337350724536], [2.1540555719779855, 41.40133735072453], [2.134055571977986, 41.40133735072453], [2.134055571977986, 41.381337350724536]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.454599737656805, "ROI (%)": 7.587799816000169, "cluster": 3, "competencia": 93, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.2737577462041715, "indice_oportunidad": 50.66134723413627, "neighbourhood": "SANTS", "ocupacion": 0.6159005811655072, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 2937.696286273895, "precio_medio": 324.8447573552673, "reviews_score": 4.962447294942111, "roi_prevision_1y": 5.632065811347721, "roi_prevision_3y": 6.196646005071802}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1334000000000004, 41.3751], [2.1534, 41.3751], [2.1534, 41.3951], [2.1334000000000004, 41.3951], [2.1334000000000004, 41.3751]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.4672360788274705, "ROI (%)": 11.62522284353982, "cluster": 3, "competencia": 121, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.2400313630778703, "indice_oportunidad": 49.01630897686249, "neighbourhood": "LES CORTS", "ocupacion": 0.5644885149016018, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 4473.592430635182, "precio_medio": 373.16588453417694, "reviews_score": 4.251782295825365, "roi_prevision_1y": 5.796738803359116, "roi_prevision_3y": 5.8774162094676425}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.134055571977986, 41.36886264927547], [2.1540555719779855, 41.36886264927547], [2.1540555719779855, 41.38886264927547], [2.134055571977986, 41.38886264927547], [2.134055571977986, 41.36886264927547]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 6.433937943676302, "ROI (%)": 8.11711076089411, "cluster": 1, "competencia": 108, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.35804134481222594, "indice_oportunidad": 58.993600122600455, "neighbourhood": "LA MATERNITAT I SANT RAMON", "ocupacion": 0.8718790609370293, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 3080.575765766197, "precio_medio": 264.06193216160324, "reviews_score": 4.497248505892386, "roi_prevision_1y": 6.701067370623354, "roi_prevision_3y": 6.780620867997922}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1359936362707224, 41.36289790070773], [2.155993636270722, 41.36289790070773], [2.155993636270722, 41.382897900707725], [2.1359936362707224, 41.382897900707725], [2.1359936362707224, 41.36289790070773]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.198051453057904, "ROI (%)": 10.200680211778108, "cluster": 1, "competencia": 162, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.36756962386523984, "indice_oportunidad": 70.55852187676963, "neighbourhood": "PEDRALBES", "ocupacion": 0.8232481518257668, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 5549.93440501754, "precio_medio": 286.0755767502137, "reviews_score": 4.3008783098167696, "roi_prevision_1y": 8.487031282473302, "roi_prevision_3y": 8.856572655033716}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.139129490168752, 41.35746644243123], [2.1591294901687514, 41.35746644243123], [2.1591294901687514, 41.37746644243123], [2.139129490168752, 41.37746644243123], [2.139129490168752, 41.35746644243123]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 7.455560149136926, "ROI (%)": 10.467102793432797, "cluster": 1, "competencia": 102, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.4456670260287613, "indice_oportunidad": 66.49334973938024, "neighbourhood": "VALLVIDRERA", "ocupacion": 0.7533615026041693, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 3216.746707663763, "precio_medio": 217.0248769495479, "reviews_score": 4.284840494377468, "roi_prevision_1y": 7.736764756725551, "roi_prevision_3y": 8.228763190694686}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1433260818092346, 41.352805655235684], [2.163326081809234, 41.352805655235684], [2.163326081809234, 41.37280565523568], [2.1433260818092346, 41.37280565523568], [2.1433260818092346, 41.352805655235684]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 6.329833121584335, "ROI (%)": 6.848544555255271, "cluster": 1, "competencia": 155, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.1920741072966221, "indice_oportunidad": 57.04525363624694, "neighbourhood": "SARRI\u00c0", "ocupacion": 0.848584236075087, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 3677.9384837943244, "precio_medio": 210.2845031939497, "reviews_score": 4.036886947354533, "roi_prevision_1y": 6.578931334668212, "roi_prevision_3y": 6.853089562616276}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1484, 41.34911923788647], [2.1683999999999997, 41.34911923788647], [2.1683999999999997, 41.369119237886466], [2.1484, 41.369119237886466], [2.1484, 41.34911923788647]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.894823157779037, "ROI (%)": 14.695846277645586, "cluster": 1, "competencia": 137, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.29967735195390094, "indice_oportunidad": 76.90396688760505, "neighbourhood": "SANT GERVASI-LA BONANOVA", "ocupacion": 0.8214688307596458, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 4813.51721736967, "precio_medio": 360.93943667956484, "reviews_score": 4.609564333979897, "roi_prevision_1y": 9.52564568564683, "roi_prevision_3y": 10.07593915431772}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.154129490168752, 41.34656830451115], [2.1741294901687516, 41.34656830451115], [2.1741294901687516, 41.36656830451115], [2.154129490168752, 41.36656830451115], [2.154129490168752, 41.34656830451115]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.115950885216335, "ROI (%)": 12.751328233611146, "cluster": 3, "competencia": 119, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.32880167968367324, "indice_oportunidad": 47.486202783415905, "neighbourhood": "SANT GERVASI-GALVANY", "ocupacion": 0.5746280235544143, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 2769.1356835660445, "precio_medio": 401.7180021428117, "reviews_score": 4.502679023228861, "roi_prevision_1y": 5.260206784212478, "roi_prevision_3y": 5.510668451533375}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1602641461019707, 41.34526434313896], [2.1802641461019703, 41.34526434313896], [2.1802641461019703, 41.36526434313895], [2.1602641461019707, 41.36526434313895], [2.1602641461019707, 41.34526434313896]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 6.337157188281745, "ROI (%)": 14.394989415641891, "cluster": 1, "competencia": 91, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.4074216057225236, "indice_oportunidad": 57.430370511316866, "neighbourhood": "EL PUTXET I EL FARR\u00d3", "ocupacion": 0.8570235993959912, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 4227.45993460413, "precio_medio": 294.59924088147494, "reviews_score": 4.05147875124999, "roi_prevision_1y": 6.733449157242636, "roi_prevision_3y": 7.265710305242131}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1665358538980297, 41.34526434313896], [2.1865358538980293, 41.34526434313896], [2.1865358538980293, 41.36526434313895], [2.1665358538980297, 41.36526434313895], [2.1665358538980297, 41.34526434313896]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 6.930894746349534, "ROI (%)": 13.948273504276488, "cluster": 1, "competencia": 63, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.1174415087017735, "indice_oportunidad": 61.246996840604545, "neighbourhood": "VALLCARCA I ELS PENITENTS", "ocupacion": 0.7157368967662603, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 5307.142754282428, "precio_medio": 375.2649673419018, "reviews_score": 4.278646464236611, "roi_prevision_1y": 7.29940486569421, "roi_prevision_3y": 7.594365154298735}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1726705098312484, 41.34656830451115], [2.192670509831248, 41.34656830451115], [2.192670509831248, 41.36656830451115], [2.1726705098312484, 41.36656830451115], [2.1726705098312484, 41.34656830451115]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 7.648559873736287, "ROI (%)": 10.978999788110851, "cluster": 0, "competencia": 172, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.4978202043189365, "indice_oportunidad": 68.36897513146664, "neighbourhood": "LA SALUT", "ocupacion": 0.822976062065625, "perfil_inversion": "Alto rendimiento/Alto riesgo", "precio_m2": 2392.5167654387724, "precio_medio": 327.12270187857257, "reviews_score": 4.908265885966654, "roi_prevision_1y": 7.937603606422633, "roi_prevision_3y": 8.675014257852771}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1784000000000003, 41.34911923788647], [2.1984, 41.34911923788647], [2.1984, 41.369119237886466], [2.1784000000000003, 41.369119237886466], [2.1784000000000003, 41.34911923788647]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 10.281407691144109, "ROI (%)": 14.218742350231167, "cluster": 0, "competencia": 198, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.2879778055963772, "indice_oportunidad": 87.66217694237872, "neighbourhood": "VILA DE GR\u00c0CIA", "ocupacion": 0.8584365199693973, "perfil_inversion": "Alto rendimiento/Alto riesgo", "precio_m2": 4184.633858532305, "precio_medio": 251.6160184046157, "reviews_score": 4.239561890666972, "roi_prevision_1y": 10.745992132530699, "roi_prevision_3y": 10.995328113353288}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.183473918190766, 41.352805655235684], [2.2034739181907654, 41.352805655235684], [2.2034739181907654, 41.37280565523568], [2.183473918190766, 41.37280565523568], [2.183473918190766, 41.352805655235684]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.597390257266878, "ROI (%)": 5.884925020519195, "cluster": 3, "competencia": 178, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.21182413671870345, "indice_oportunidad": 49.81868327782369, "neighbourhood": "CAMP D\u0027EN GRASSOT I GR\u00c0CIA NOVA", "ocupacion": 0.6272013899887455, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 4259.882794248423, "precio_medio": 327.10467041313103, "reviews_score": 4.144894872091223, "roi_prevision_1y": 5.7953834774074, "roi_prevision_3y": 6.107510604175515}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1876705098312486, 41.35746644243123], [2.207670509831248, 41.35746644243123], [2.207670509831248, 41.37746644243123], [2.1876705098312486, 41.37746644243123], [2.1876705098312486, 41.35746644243123]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.113875507308894, "ROI (%)": 6.959828624191452, "cluster": 2, "competencia": 170, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.4533976089065036, "indice_oportunidad": 69.27401509681508, "neighbourhood": "EL BAIX GUINARD\u00d3", "ocupacion": 0.5440207698110707, "perfil_inversion": "Bajo rendimiento/Bajo riesgo", "precio_m2": 4781.822871777311, "precio_medio": 415.3527424849477, "reviews_score": 4.489452760277563, "roi_prevision_1y": 8.573857784713669, "roi_prevision_3y": 9.08714478207508}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.190806363729278, 41.36289790070773], [2.2108063637292776, 41.36289790070773], [2.2108063637292776, 41.382897900707725], [2.190806363729278, 41.382897900707725], [2.190806363729278, 41.36289790070773]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.73931655089634, "ROI (%)": 5.45227288910538, "cluster": 3, "competencia": 77, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.39908750955896555, "indice_oportunidad": 76.82111125457574, "neighbourhood": "CAN BAR\u00d3", "ocupacion": 0.5911740650167767, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 2763.0492891219183, "precio_medio": 297.31304706675365, "reviews_score": 4.9856504541106, "roi_prevision_1y": 8.956887524187986, "roi_prevision_3y": 9.297193525484616}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1927444280220145, 41.36886264927547], [2.212744428022014, 41.36886264927547], [2.212744428022014, 41.38886264927547], [2.1927444280220145, 41.38886264927547], [2.1927444280220145, 41.36886264927547]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 4.371603301759982, "ROI (%)": 8.253303307632644, "cluster": 3, "competencia": 42, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.4812287388095813, "indice_oportunidad": 42.70306829567014, "neighbourhood": "EL GUINARD\u00d3", "ocupacion": 0.6708431154505026, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 2679.5433869157237, "precio_medio": 417.34827418605045, "reviews_score": 4.2420552715115, "roi_prevision_1y": 4.460395337588498, "roi_prevision_3y": 4.6482144994650705}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_510991a6c5e97f19a8e982b29cbeb76e.addTo(choropleth_7b4b2b3202e74ee29126e29eae6d2491);
+        
+    
+    var color_map_54b1f1ac4c553436e590dce3db398cd7 = {};
+
+    
+    color_map_54b1f1ac4c553436e590dce3db398cd7.color = d3.scale.threshold()
+              .domain([0.0, 0.006012024048096192, 0.012024048096192385, 0.018036072144288578, 0.02404809619238477, 0.03006012024048096, 0.036072144288577156, 0.04208416833667335, 0.04809619238476954, 0.05410821643286573, 0.06012024048096192, 0.06613226452905811, 0.07214428857715431, 0.0781563126252505, 0.0841683366733467, 0.09018036072144289, 0.09619238476953908, 0.10220440881763528, 0.10821643286573146, 0.11422845691382766, 0.12024048096192384, 0.12625250501002003, 0.13226452905811623, 0.13827655310621242, 0.14428857715430862, 0.15030060120240482, 0.156312625250501, 0.1623246492985972, 0.1683366733466934, 0.1743486973947896, 0.18036072144288579, 0.18637274549098196, 0.19238476953907815, 0.19839679358717435, 0.20440881763527055, 0.21042084168336672, 0.21643286573146292, 0.22244488977955912, 0.22845691382765532, 0.23446893787575152, 0.24048096192384769, 0.24649298597194388, 0.25250501002004005, 0.25851703406813625, 0.26452905811623245, 0.27054108216432865, 0.27655310621242485, 0.28256513026052105, 0.28857715430861725, 0.29458917835671344, 0.30060120240480964, 0.3066132264529058, 0.312625250501002, 0.3186372745490982, 0.3246492985971944, 0.3306613226452906, 0.3366733466933868, 0.342685370741483, 0.3486973947895792, 0.35470941883767537, 0.36072144288577157, 0.3667334669338677, 0.3727454909819639, 0.3787575150300601, 0.3847695390781563, 0.3907815631262525, 0.3967935871743487, 0.4028056112224449, 0.4088176352705411, 0.4148296593186373, 0.42084168336673344, 0.42685370741482964, 0.43286573146292584, 0.43887775551102204, 0.44488977955911824, 0.45090180360721444, 0.45691382765531063, 0.46292585170340683, 0.46893787575150303, 0.4749498997995992, 0.48096192384769537, 0.48697394789579157, 0.49298597194388777, 0.49899799599198397, 0.5050100200400801, 0.5110220440881763, 0.5170340681362725, 0.5230460921843687, 0.5290581162324649, 0.5350701402805611, 0.5410821643286573, 0.5470941883767535, 0.5531062124248497, 0.5591182364729459, 0.5651302605210421, 0.5711422845691383, 0.5771543086172345, 0.5831663326653307, 0.5891783567134269, 0.5951903807615231, 0.6012024048096193, 0.6072144288577155, 0.6132264529058116, 0.6192384769539078, 0.625250501002004, 0.6312625250501002, 0.6372745490981964, 0.6432865731462926, 0.6492985971943888, 0.655310621242485, 0.6613226452905812, 0.6673346693386774, 0.6733466933867736, 0.6793587174348698, 0.685370741482966, 0.6913827655310621, 0.6973947895791583, 0.7034068136272545, 0.7094188376753507, 0.7154308617234469, 0.7214428857715431, 0.7274549098196392, 0.7334669338677354, 0.7394789579158316, 0.7454909819639278, 0.751503006012024, 0.7575150300601202, 0.7635270541082164, 0.7695390781563126, 0.7755511022044088, 0.781563126252505, 0.7875751503006012, 0.7935871743486974, 0.7995991983967936, 0.8056112224448898, 0.811623246492986, 0.8176352705410822, 0.8236472945891784, 0.8296593186372746, 0.8356713426853707, 0.8416833667334669, 0.8476953907815631, 0.8537074148296593, 0.8597194388777555, 0.8657314629258517, 0.8717434869739479, 0.8777555110220441, 0.8837675350701403, 0.8897795591182365, 0.8957915831663327, 0.9018036072144289, 0.9078156312625251, 0.9138276553106213, 0.9198396793587175, 0.9258517034068137, 0.9318637274549099, 0.9378757515030061, 0.9438877755511023, 0.9498997995991983, 0.9559118236472945, 0.9619238476953907, 0.9679358717434869, 0.9739478957915831, 0.9799599198396793, 0.9859719438877755, 0.9919839679358717, 0.9979959919839679, 1.0040080160320641, 1.0100200400801602, 1.0160320641282565, 1.0220440881763526, 1.028056112224449, 1.034068136272545, 1.0400801603206413, 1.0460921843687374, 1.0521042084168337, 1.0581162324649298, 1.0641282565130261, 1.0701402805611222, 1.0761523046092185, 1.0821643286573146, 1.088176352705411, 1.094188376753507, 1.1002004008016033, 1.1062124248496994, 1.1122244488977955, 1.1182364729458918, 1.1242484969939879, 1.1302605210420842, 1.1362725450901803, 1.1422845691382766, 1.1482965931863727, 1.154308617234469, 1.160320641282565, 1.1663326653306614, 1.1723446893787575, 1.1783567134268538, 1.1843687374749499, 1.1903807615230462, 1.1963927855711423, 1.2024048096192386, 1.2084168336673347, 1.214428857715431, 1.220440881763527, 1.2264529058116231, 1.2324649298597194, 1.2384769539078155, 1.2444889779559118, 1.250501002004008, 1.2565130260521042, 1.2625250501002003, 1.2685370741482966, 1.2745490981963927, 1.280561122244489, 1.2865731462925851, 1.2925851703406814, 1.2985971943887775, 1.3046092184368738, 1.31062124248497, 1.3166332665330662, 1.3226452905811623, 1.3286573146292586, 1.3346693386773547, 1.3406813627254508, 1.346693386773547, 1.3527054108216432, 1.3587174348697395, 1.3647294589178356, 1.370741482965932, 1.376753507014028, 1.3827655310621243, 1.3887775551102204, 1.3947895791583167, 1.4008016032064128, 1.406813627254509, 1.4128256513026052, 1.4188376753507015, 1.4248496993987976, 1.4308617234468939, 1.43687374749499, 1.4428857715430863, 1.4488977955911824, 1.4549098196392785, 1.4609218436873748, 1.4669338677354709, 1.4729458917835672, 1.4789579158316633, 1.4849699398797596, 1.4909819639278556, 1.496993987975952, 1.503006012024048, 1.5090180360721444, 1.5150300601202404, 1.5210420841683367, 1.5270541082164328, 1.5330661322645291, 1.5390781563126252, 1.5450901803607215, 1.5511022044088176, 1.5571142284569137, 1.56312625250501, 1.5691382765531061, 1.5751503006012024, 1.5811623246492985, 1.5871743486973948, 1.593186372745491, 1.5991983967935872, 1.6052104208416833, 1.6112224448897796, 1.6172344689378757, 1.623246492985972, 1.629258517034068, 1.6352705410821644, 1.6412825651302605, 1.6472945891783568, 1.653306613226453, 1.6593186372745492, 1.6653306613226453, 1.6713426853707414, 1.6773547094188377, 1.6833667334669338, 1.68937875751503, 1.6953907815631262, 1.7014028056112225, 1.7074148296593186, 1.7134268537074149, 1.719438877755511, 1.7254509018036073, 1.7314629258517034, 1.7374749498997997, 1.7434869739478958, 1.749498997995992, 1.7555110220440882, 1.7615230460921845, 1.7675350701402806, 1.7735470941883769, 1.779559118236473, 1.785571142284569, 1.7915831663326653, 1.7975951903807614, 1.8036072144288577, 1.8096192384769538, 1.8156312625250501, 1.8216432865731462, 1.8276553106212425, 1.8336673346693386, 1.839679358717435, 1.845691382765531, 1.8517034068136273, 1.8577154308617234, 1.8637274549098197, 1.8697394789579158, 1.8757515030060121, 1.8817635270541082, 1.8877755511022045, 1.8937875751503006, 1.8997995991983967, 1.905811623246493, 1.911823647294589, 1.9178356713426854, 1.9238476953907815, 1.9298597194388778, 1.9358717434869739, 1.9418837675350702, 1.9478957915831663, 1.9539078156312626, 1.9599198396793587, 1.965931863727455, 1.971943887775551, 1.9779559118236474, 1.9839679358717435, 1.9899799599198398, 1.9959919839679359, 2.002004008016032, 2.0080160320641283, 2.0140280561122244, 2.0200400801603204, 2.026052104208417, 2.032064128256513, 2.038076152304609, 2.0440881763527052, 2.0501002004008018, 2.056112224448898, 2.062124248496994, 2.06813627254509, 2.0741482965931866, 2.0801603206412826, 2.0861723446893787, 2.092184368737475, 2.0981963927855714, 2.1042084168336674, 2.1102204408817635, 2.1162324649298596, 2.1222444889779557, 2.1282565130260522, 2.1342685370741483, 2.1402805611222444, 2.1462925851703405, 2.152304609218437, 2.158316633266533, 2.164328657314629, 2.1703406813627253, 2.176352705410822, 2.182364729458918, 2.188376753507014, 2.19438877755511, 2.2004008016032066, 2.2064128256513027, 2.212424849699399, 2.218436873747495, 2.224448897795591, 2.2304609218436875, 2.2364729458917836, 2.2424849699398797, 2.2484969939879758, 2.2545090180360723, 2.2605210420841684, 2.2665330661322645, 2.2725450901803605, 2.278557114228457, 2.284569138276553, 2.2905811623246493, 2.2965931863727453, 2.302605210420842, 2.308617234468938, 2.314629258517034, 2.32064128256513, 2.3266533066132267, 2.3326653306613228, 2.338677354709419, 2.344689378757515, 2.350701402805611, 2.3567134268537075, 2.3627254509018036, 2.3687374749498997, 2.374749498997996, 2.3807615230460923, 2.3867735470941884, 2.3927855711422845, 2.3987975951903806, 2.404809619238477, 2.4108216432865732, 2.4168336673346693, 2.4228456913827654, 2.428857715430862, 2.434869739478958, 2.440881763527054, 2.44689378757515, 2.4529058116232463, 2.458917835671343, 2.464929859719439, 2.470941883767535, 2.476953907815631, 2.4829659318637276, 2.4889779559118237, 2.49498997995992, 2.501002004008016, 2.5070140280561124, 2.5130260521042085, 2.5190380761523046, 2.5250501002004007, 2.531062124248497, 2.5370741482965933, 2.5430861723446894, 2.5490981963927855, 2.555110220440882, 2.561122244488978, 2.567134268537074, 2.5731462925851702, 2.5791583166332663, 2.585170340681363, 2.591182364729459, 2.597194388777555, 2.603206412825651, 2.6092184368737477, 2.6152304609218437, 2.62124248496994, 2.627254509018036, 2.6332665330661325, 2.6392785571142285, 2.6452905811623246, 2.6513026052104207, 2.6573146292585172, 2.6633266533066133, 2.6693386773547094, 2.6753507014028055, 2.6813627254509016, 2.687374749498998, 2.693386773547094, 2.6993987975951903, 2.7054108216432864, 2.711422845691383, 2.717434869739479, 2.723446893787575, 2.729458917835671, 2.7354709418837677, 2.741482965931864, 2.74749498997996, 2.753507014028056, 2.7595190380761525, 2.7655310621242486, 2.7715430861723447, 2.7775551102204408, 2.783567134268537, 2.7895791583166334, 2.7955911823647295, 2.8016032064128256, 2.8076152304609217, 2.813627254509018, 2.8196392785571143, 2.8256513026052104, 2.8316633266533064, 2.837675350701403, 2.843687374749499, 2.849699398797595, 2.8557114228456912, 2.8617234468937878, 2.867735470941884, 2.87374749498998, 2.879759519038076, 2.8857715430861726, 2.8917835671342687, 2.8977955911823647, 2.903807615230461, 2.909819639278557, 2.9158316633266534, 2.9218436873747495, 2.9278557114228456, 2.9338677354709417, 2.9398797595190382, 2.9458917835671343, 2.9519038076152304, 2.9579158316633265, 2.963927855711423, 2.969939879759519, 2.975951903807615, 2.9819639278557113, 2.987975951903808, 2.993987975951904, 3.0])
+              .range(['#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#414386ff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#2a778eff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#23a783ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#79d150ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff', '#fde725ff']);
+    
+
+    color_map_54b1f1ac4c553436e590dce3db398cd7.x = d3.scale.linear()
+              .domain([0.0, 3.0])
+              .range([0, 450 - 50]);
+
+    color_map_54b1f1ac4c553436e590dce3db398cd7.legend = L.control({position: 'topright'});
+    color_map_54b1f1ac4c553436e590dce3db398cd7.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_54b1f1ac4c553436e590dce3db398cd7.legend.addTo(map_6a7675aa24d9a0e4df386e7ef714462a);
+
+    color_map_54b1f1ac4c553436e590dce3db398cd7.xAxis = d3.svg.axis()
+        .scale(color_map_54b1f1ac4c553436e590dce3db398cd7.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0]);
+
+    color_map_54b1f1ac4c553436e590dce3db398cd7.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_54b1f1ac4c553436e590dce3db398cd7.g = color_map_54b1f1ac4c553436e590dce3db398cd7.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_54b1f1ac4c553436e590dce3db398cd7.g.selectAll("rect")
+        .data(color_map_54b1f1ac4c553436e590dce3db398cd7.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_54b1f1ac4c553436e590dce3db398cd7.x(color_map_54b1f1ac4c553436e590dce3db398cd7.color.domain()[i - 1]) : color_map_54b1f1ac4c553436e590dce3db398cd7.x.range()[0],
+            x1: i < color_map_54b1f1ac4c553436e590dce3db398cd7.color.domain().length ? color_map_54b1f1ac4c553436e590dce3db398cd7.x(color_map_54b1f1ac4c553436e590dce3db398cd7.color.domain()[i]) : color_map_54b1f1ac4c553436e590dce3db398cd7.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_54b1f1ac4c553436e590dce3db398cd7.g.call(color_map_54b1f1ac4c553436e590dce3db398cd7.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Perfil de Inversi\u00f3n");
+    
+            choropleth_7b4b2b3202e74ee29126e29eae6d2491.addTo(map_6a7675aa24d9a0e4df386e7ef714462a);
+        
+    
+        function geo_json_42af39aab0da127898fa22d769ce0162_styler(feature) {
+            switch(feature.properties.neighbourhood) {
+                default:
+                    return {"color": "black", "fillColor": "#440154", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_42af39aab0da127898fa22d769ce0162_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_42af39aab0da127898fa22d769ce0162 = L.geoJson(null, {
+                onEachFeature: geo_json_42af39aab0da127898fa22d769ce0162_onEachFeature,
+            
+                style: geo_json_42af39aab0da127898fa22d769ce0162_styler,
+            ...{
+}
+        });
+
+        function geo_json_42af39aab0da127898fa22d769ce0162_add (data) {
+            geo_json_42af39aab0da127898fa22d769ce0162
+                .addData(data);
+        }
+            geo_json_42af39aab0da127898fa22d769ce0162_add({"features": [{"geometry": {"coordinates": [[[2.1433260818092346, 41.39739434476432], [2.163326081809234, 41.39739434476432], [2.163326081809234, 41.41739434476432], [2.1433260818092346, 41.41739434476432], [2.1433260818092346, 41.39739434476432]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 11.759278817295954, "ROI (%)": 9.951769101112703, "cluster": 0, "competencia": 173, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.49155714331000366, "indice_oportunidad": 100.0, "neighbourhood": "LA MARINA", "ocupacion": 0.8022204554172194, "perfil_inversion": "Alto rendimiento/Alto riesgo", "precio_m2": 3496.524345883801, "precio_medio": 369.84600893371487, "reviews_score": 4.703018958895178, "roi_prevision_1y": 12.590104655823419, "roi_prevision_3y": 12.529560518099341}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.139129490168752, 41.392733557568775], [2.1591294901687514, 41.392733557568775], [2.1591294901687514, 41.41273355756877], [2.139129490168752, 41.41273355756877], [2.139129490168752, 41.392733557568775]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 10.659541126403374, "ROI (%)": 5.343885211152184, "cluster": 0, "competencia": 175, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.294696861183782, "indice_oportunidad": 90.98434290194595, "neighbourhood": "LA FONT DE LA GUATLLA", "ocupacion": 0.591519266196649, "perfil_inversion": "Alto rendimiento/Alto riesgo", "precio_m2": 2449.336568933867, "precio_medio": 237.05868575830212, "reviews_score": 4.363629602379294, "roi_prevision_1y": 11.467545110866254, "roi_prevision_3y": 12.239115515576595}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1726705098312484, 41.34656830451115], [2.192670509831248, 41.34656830451115], [2.192670509831248, 41.36656830451115], [2.1726705098312484, 41.36656830451115], [2.1726705098312484, 41.34656830451115]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 7.648559873736287, "ROI (%)": 10.978999788110851, "cluster": 0, "competencia": 172, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.4978202043189365, "indice_oportunidad": 68.36897513146664, "neighbourhood": "LA SALUT", "ocupacion": 0.822976062065625, "perfil_inversion": "Alto rendimiento/Alto riesgo", "precio_m2": 2392.5167654387724, "precio_medio": 327.12270187857257, "reviews_score": 4.908265885966654, "roi_prevision_1y": 7.937603606422633, "roi_prevision_3y": 8.675014257852771}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1784000000000003, 41.34911923788647], [2.1984, 41.34911923788647], [2.1984, 41.369119237886466], [2.1784000000000003, 41.369119237886466], [2.1784000000000003, 41.34911923788647]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 10.281407691144109, "ROI (%)": 14.218742350231167, "cluster": 0, "competencia": 198, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.2879778055963772, "indice_oportunidad": 87.66217694237872, "neighbourhood": "VILA DE GR\u00c0CIA", "ocupacion": 0.8584365199693973, "perfil_inversion": "Alto rendimiento/Alto riesgo", "precio_m2": 4184.633858532305, "precio_medio": 251.6160184046157, "reviews_score": 4.239561890666972, "roi_prevision_1y": 10.745992132530699, "roi_prevision_3y": 10.995328113353288}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_42af39aab0da127898fa22d769ce0162.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["neighbourhood", "perfil_inversion", "Net ROI (%)", "precio_m2", "ocupacion"];
+    let aliases = ["Barrio:", "Perfil:", "ROI Neto (%):", "Precio por m\u00b2 (\u20ac):", "Ocupaci\u00f3n:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+        function geo_json_d01b4386a64fcab01df9cb83f295208f_styler(feature) {
+            switch(feature.properties.neighbourhood) {
+                default:
+                    return {"color": "black", "fillColor": "#3b528b", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_d01b4386a64fcab01df9cb83f295208f_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d01b4386a64fcab01df9cb83f295208f = L.geoJson(null, {
+                onEachFeature: geo_json_d01b4386a64fcab01df9cb83f295208f_onEachFeature,
+            
+                style: geo_json_d01b4386a64fcab01df9cb83f295208f_styler,
+            ...{
+}
+        });
+
+        function geo_json_d01b4386a64fcab01df9cb83f295208f_add (data) {
+            geo_json_d01b4386a64fcab01df9cb83f295208f
+                .addData(data);
+        }
+            geo_json_d01b4386a64fcab01df9cb83f295208f_add({"features": [{"geometry": {"coordinates": [[[2.1934, 41.3751], [2.2133999999999996, 41.3751], [2.2133999999999996, 41.3951], [2.1934, 41.3951], [2.1934, 41.3751]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 6.9963209507789, "ROI (%)": 11.075448519014383, "cluster": 1, "competencia": 57, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.29755748607337384, "indice_oportunidad": 62.1162985522473, "neighbourhood": "EL RAVAL", "ocupacion": 0.7090931317527976, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 5142.822814515021, "precio_medio": 189.11085072244293, "reviews_score": 4.818014765922493, "roi_prevision_1y": 7.275089486957047, "roi_prevision_3y": 7.785432083336065}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1602641461019707, 41.40493565686105], [2.1802641461019703, 41.40493565686105], [2.1802641461019703, 41.424935656861045], [2.1602641461019707, 41.424935656861045], [2.1602641461019707, 41.40493565686105]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.80892009394567, "ROI (%)": 11.842330265121568, "cluster": 1, "competencia": 125, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.3545330472743582, "indice_oportunidad": 77.79293350005936, "neighbourhood": "LA NOVA ESQUERRA DE L\u0027EIXAMPLE", "ocupacion": 0.8630265895704372, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 3009.4636748693115, "precio_medio": 249.23084997705308, "reviews_score": 4.94290970391252, "roi_prevision_1y": 9.241585993966588, "roi_prevision_3y": 9.635614449935876}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.134055571977986, 41.36886264927547], [2.1540555719779855, 41.36886264927547], [2.1540555719779855, 41.38886264927547], [2.134055571977986, 41.38886264927547], [2.134055571977986, 41.36886264927547]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 6.433937943676302, "ROI (%)": 8.11711076089411, "cluster": 1, "competencia": 108, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.35804134481222594, "indice_oportunidad": 58.993600122600455, "neighbourhood": "LA MATERNITAT I SANT RAMON", "ocupacion": 0.8718790609370293, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 3080.575765766197, "precio_medio": 264.06193216160324, "reviews_score": 4.497248505892386, "roi_prevision_1y": 6.701067370623354, "roi_prevision_3y": 6.780620867997922}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1359936362707224, 41.36289790070773], [2.155993636270722, 41.36289790070773], [2.155993636270722, 41.382897900707725], [2.1359936362707224, 41.382897900707725], [2.1359936362707224, 41.36289790070773]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.198051453057904, "ROI (%)": 10.200680211778108, "cluster": 1, "competencia": 162, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.36756962386523984, "indice_oportunidad": 70.55852187676963, "neighbourhood": "PEDRALBES", "ocupacion": 0.8232481518257668, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 5549.93440501754, "precio_medio": 286.0755767502137, "reviews_score": 4.3008783098167696, "roi_prevision_1y": 8.487031282473302, "roi_prevision_3y": 8.856572655033716}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.139129490168752, 41.35746644243123], [2.1591294901687514, 41.35746644243123], [2.1591294901687514, 41.37746644243123], [2.139129490168752, 41.37746644243123], [2.139129490168752, 41.35746644243123]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 7.455560149136926, "ROI (%)": 10.467102793432797, "cluster": 1, "competencia": 102, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.4456670260287613, "indice_oportunidad": 66.49334973938024, "neighbourhood": "VALLVIDRERA", "ocupacion": 0.7533615026041693, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 3216.746707663763, "precio_medio": 217.0248769495479, "reviews_score": 4.284840494377468, "roi_prevision_1y": 7.736764756725551, "roi_prevision_3y": 8.228763190694686}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1433260818092346, 41.352805655235684], [2.163326081809234, 41.352805655235684], [2.163326081809234, 41.37280565523568], [2.1433260818092346, 41.37280565523568], [2.1433260818092346, 41.352805655235684]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 6.329833121584335, "ROI (%)": 6.848544555255271, "cluster": 1, "competencia": 155, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.1920741072966221, "indice_oportunidad": 57.04525363624694, "neighbourhood": "SARRI\u00c0", "ocupacion": 0.848584236075087, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 3677.9384837943244, "precio_medio": 210.2845031939497, "reviews_score": 4.036886947354533, "roi_prevision_1y": 6.578931334668212, "roi_prevision_3y": 6.853089562616276}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1484, 41.34911923788647], [2.1683999999999997, 41.34911923788647], [2.1683999999999997, 41.369119237886466], [2.1484, 41.369119237886466], [2.1484, 41.34911923788647]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.894823157779037, "ROI (%)": 14.695846277645586, "cluster": 1, "competencia": 137, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.29967735195390094, "indice_oportunidad": 76.90396688760505, "neighbourhood": "SANT GERVASI-LA BONANOVA", "ocupacion": 0.8214688307596458, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 4813.51721736967, "precio_medio": 360.93943667956484, "reviews_score": 4.609564333979897, "roi_prevision_1y": 9.52564568564683, "roi_prevision_3y": 10.07593915431772}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1602641461019707, 41.34526434313896], [2.1802641461019703, 41.34526434313896], [2.1802641461019703, 41.36526434313895], [2.1602641461019707, 41.36526434313895], [2.1602641461019707, 41.34526434313896]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 6.337157188281745, "ROI (%)": 14.394989415641891, "cluster": 1, "competencia": 91, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.4074216057225236, "indice_oportunidad": 57.430370511316866, "neighbourhood": "EL PUTXET I EL FARR\u00d3", "ocupacion": 0.8570235993959912, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 4227.45993460413, "precio_medio": 294.59924088147494, "reviews_score": 4.05147875124999, "roi_prevision_1y": 6.733449157242636, "roi_prevision_3y": 7.265710305242131}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1665358538980297, 41.34526434313896], [2.1865358538980293, 41.34526434313896], [2.1865358538980293, 41.36526434313895], [2.1665358538980297, 41.36526434313895], [2.1665358538980297, 41.34526434313896]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 6.930894746349534, "ROI (%)": 13.948273504276488, "cluster": 1, "competencia": 63, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.1174415087017735, "indice_oportunidad": 61.246996840604545, "neighbourhood": "VALLCARCA I ELS PENITENTS", "ocupacion": 0.7157368967662603, "perfil_inversion": "Rendimiento estable/Bajo riesgo", "precio_m2": 5307.142754282428, "precio_medio": 375.2649673419018, "reviews_score": 4.278646464236611, "roi_prevision_1y": 7.29940486569421, "roi_prevision_3y": 7.594365154298735}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_d01b4386a64fcab01df9cb83f295208f.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["neighbourhood", "perfil_inversion", "Net ROI (%)", "precio_m2", "ocupacion"];
+    let aliases = ["Barrio:", "Perfil:", "ROI Neto (%):", "Precio por m\u00b2 (\u20ac):", "Ocupaci\u00f3n:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+        function geo_json_4aa210d6961a2af971df8e0437196072_styler(feature) {
+            switch(feature.properties.neighbourhood) {
+                default:
+                    return {"color": "black", "fillColor": "#21918c", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_4aa210d6961a2af971df8e0437196072_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4aa210d6961a2af971df8e0437196072 = L.geoJson(null, {
+                onEachFeature: geo_json_4aa210d6961a2af971df8e0437196072_onEachFeature,
+            
+                style: geo_json_4aa210d6961a2af971df8e0437196072_styler,
+            ...{
+}
+        });
+
+        function geo_json_4aa210d6961a2af971df8e0437196072_add (data) {
+            geo_json_4aa210d6961a2af971df8e0437196072
+                .addData(data);
+        }
+            geo_json_4aa210d6961a2af971df8e0437196072_add({"features": [{"geometry": {"coordinates": [[[2.1927444280220145, 41.381337350724536], [2.212744428022014, 41.381337350724536], [2.212744428022014, 41.40133735072453], [2.1927444280220145, 41.40133735072453], [2.1927444280220145, 41.381337350724536]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 11.60571445127933, "ROI (%)": 6.705241236872915, "cluster": 2, "competencia": 140, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.17152908368853154, "indice_oportunidad": 97.85670660275416, "neighbourhood": "EL G\u00d3TICO", "ocupacion": 0.6710164073434198, "perfil_inversion": "Bajo rendimiento/Bajo riesgo", "precio_m2": 4751.933032686774, "precio_medio": 246.01168437039684, "reviews_score": 4.860730583256343, "roi_prevision_1y": 12.222742682130733, "roi_prevision_3y": 12.411468976821482}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.190806363729278, 41.38730209929228], [2.2108063637292776, 41.38730209929228], [2.2108063637292776, 41.407302099292274], [2.190806363729278, 41.407302099292274], [2.190806363729278, 41.38730209929228]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 9.85595153449124, "ROI (%)": 5.650515929852795, "cluster": 2, "competencia": 157, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.24658751383314398, "indice_oportunidad": 82.85042021449047, "neighbourhood": "LA BARCELONETA", "ocupacion": 0.510167650697638, "perfil_inversion": "Bajo rendimiento/Bajo riesgo", "precio_m2": 4791.031947043047, "precio_medio": 265.45209217801596, "reviews_score": 4.00695213053119, "roi_prevision_1y": 10.391499775563192, "roi_prevision_3y": 10.418668135192167}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1876705098312486, 41.392733557568775], [2.207670509831248, 41.392733557568775], [2.207670509831248, 41.41273355756877], [2.1876705098312486, 41.41273355756877], [2.1876705098312486, 41.392733557568775]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.789267873576293, "ROI (%)": 14.488855372533333, "cluster": 2, "competencia": 161, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.3976682092226249, "indice_oportunidad": 75.79047882368964, "neighbourhood": "SANT PERE", "ocupacion": 0.5431565707973218, "perfil_inversion": "Bajo rendimiento/Bajo riesgo", "precio_m2": 3090.612545205261, "precio_medio": 379.2841669664187, "reviews_score": 4.510747302577566, "roi_prevision_1y": 9.482037044700276, "roi_prevision_3y": 9.577475201783676}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1665358538980297, 41.40493565686105], [2.1865358538980293, 41.40493565686105], [2.1865358538980293, 41.424935656861045], [2.1665358538980297, 41.424935656861045], [2.1665358538980297, 41.40493565686105]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 10.92940916619948, "ROI (%)": 5.976721140063839, "cluster": 2, "competencia": 161, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.303525630735504, "indice_oportunidad": 91.3009206030423, "neighbourhood": "L\u0027ANTIGA ESQUERRA DE L\u0027EIXAMPLE", "ocupacion": 0.7034282764658811, "perfil_inversion": "Bajo rendimiento/Bajo riesgo", "precio_m2": 6190.455625809978, "precio_medio": 271.11882896877626, "reviews_score": 4.337615171403628, "roi_prevision_1y": 11.324053643230831, "roi_prevision_3y": 12.108544754004596}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1876705098312486, 41.35746644243123], [2.207670509831248, 41.35746644243123], [2.207670509831248, 41.37746644243123], [2.1876705098312486, 41.37746644243123], [2.1876705098312486, 41.35746644243123]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.113875507308894, "ROI (%)": 6.959828624191452, "cluster": 2, "competencia": 170, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.4533976089065036, "indice_oportunidad": 69.27401509681508, "neighbourhood": "EL BAIX GUINARD\u00d3", "ocupacion": 0.5440207698110707, "perfil_inversion": "Bajo rendimiento/Bajo riesgo", "precio_m2": 4781.822871777311, "precio_medio": 415.3527424849477, "reviews_score": 4.489452760277563, "roi_prevision_1y": 8.573857784713669, "roi_prevision_3y": 9.08714478207508}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_4aa210d6961a2af971df8e0437196072.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["neighbourhood", "perfil_inversion", "Net ROI (%)", "precio_m2", "ocupacion"];
+    let aliases = ["Barrio:", "Perfil:", "ROI Neto (%):", "Precio por m\u00b2 (\u20ac):", "Ocupaci\u00f3n:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+        function geo_json_aca9d3394ca5aa61d87fd182651e4164_styler(feature) {
+            switch(feature.properties.neighbourhood) {
+                default:
+                    return {"color": "black", "fillColor": "#5ec962", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_aca9d3394ca5aa61d87fd182651e4164_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_aca9d3394ca5aa61d87fd182651e4164 = L.geoJson(null, {
+                onEachFeature: geo_json_aca9d3394ca5aa61d87fd182651e4164_onEachFeature,
+            
+                style: geo_json_aca9d3394ca5aa61d87fd182651e4164_styler,
+            ...{
+}
+        });
+
+        function geo_json_aca9d3394ca5aa61d87fd182651e4164_add (data) {
+            geo_json_aca9d3394ca5aa61d87fd182651e4164
+                .addData(data);
+        }
+            geo_json_aca9d3394ca5aa61d87fd182651e4164_add({"features": [{"geometry": {"coordinates": [[[2.183473918190766, 41.39739434476432], [2.2034739181907654, 41.39739434476432], [2.2034739181907654, 41.41739434476432], [2.183473918190766, 41.41739434476432], [2.183473918190766, 41.39739434476432]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.248149123539492, "ROI (%)": 14.656320330745594, "cluster": 3, "competencia": 63, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.38837596970085175, "indice_oportunidad": 47.12948748599364, "neighbourhood": "EL FORT PIENC", "ocupacion": 0.5125716742746937, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 5402.7943109360995, "precio_medio": 325.7713717176346, "reviews_score": 4.4174110031487785, "roi_prevision_1y": 5.376837809255515, "roi_prevision_3y": 5.537200661884246}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1784000000000003, 41.40108076211354], [2.1984, 41.40108076211354], [2.1984, 41.42108076211353], [2.1784000000000003, 41.42108076211353], [2.1784000000000003, 41.40108076211354]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.247956162689621, "ROI (%)": 13.08397348116461, "cluster": 3, "competencia": 129, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.2232243167409557, "indice_oportunidad": 49.14009059544315, "neighbourhood": "SAGRADA FAM\u00cdLIA", "ocupacion": 0.7545641645055121, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 2598.1489372077194, "precio_medio": 167.77198834779495, "reviews_score": 4.22210781047073, "roi_prevision_1y": 5.449172359320454, "roi_prevision_3y": 5.975646763902294}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1726705098312484, 41.403631695488855], [2.192670509831248, 41.403631695488855], [2.192670509831248, 41.42363169548885], [2.1726705098312484, 41.42363169548885], [2.1726705098312484, 41.403631695488855]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 4.464668897345596, "ROI (%)": 8.046137691733707, "cluster": 3, "competencia": 170, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.3170160922219597, "indice_oportunidad": 40.715964355096055, "neighbourhood": "DRETA DE L\u0027EIXAMPLE", "ocupacion": 0.6257423924305306, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 4586.85709380027, "precio_medio": 324.3062977046096, "reviews_score": 4.1198653673336825, "roi_prevision_1y": 4.605103547868735, "roi_prevision_3y": 4.700232316455837}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.154129490168752, 41.403631695488855], [2.1741294901687516, 41.403631695488855], [2.1741294901687516, 41.42363169548885], [2.154129490168752, 41.42363169548885], [2.154129490168752, 41.403631695488855]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 9.664580622368364, "ROI (%)": 9.401524937396013, "cluster": 3, "competencia": 84, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.20018472744223367, "indice_oportunidad": 83.41206930277971, "neighbourhood": "SANT ANTONI", "ocupacion": 0.59971689165955, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 3433.702270397228, "precio_medio": 345.87572166306506, "reviews_score": 4.323202932020755, "roi_prevision_1y": 10.07398397125143, "roi_prevision_3y": 10.79729472997669}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1484, 41.40108076211354], [2.1683999999999997, 41.40108076211354], [2.1683999999999997, 41.42108076211353], [2.1484, 41.42108076211353], [2.1484, 41.40108076211354]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 4.16467595436642, "ROI (%)": 6.220382348447789, "cluster": 3, "competencia": 122, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.33594833902421756, "indice_oportunidad": 39.443621349590124, "neighbourhood": "EL POBLE SEC", "ocupacion": 0.6641531692142519, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 4099.651365087641, "precio_medio": 377.3249641871963, "reviews_score": 4.518790621743366, "roi_prevision_1y": 4.346595197126649, "roi_prevision_3y": 4.509574704444062}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1359936362707224, 41.38730209929228], [2.155993636270722, 41.38730209929228], [2.155993636270722, 41.407302099292274], [2.1359936362707224, 41.407302099292274], [2.1359936362707224, 41.38730209929228]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.698712885426209, "ROI (%)": 14.093204020787821, "cluster": 3, "competencia": 113, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.46243951508742165, "indice_oportunidad": 51.336994451902875, "neighbourhood": "HOSTAFRANCS", "ocupacion": 0.5307919639315172, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 4068.5629748060273, "precio_medio": 276.8090718111589, "reviews_score": 4.971782082720961, "roi_prevision_1y": 5.836764021867583, "roi_prevision_3y": 6.4617326455233615}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.134055571977986, 41.381337350724536], [2.1540555719779855, 41.381337350724536], [2.1540555719779855, 41.40133735072453], [2.134055571977986, 41.40133735072453], [2.134055571977986, 41.381337350724536]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.454599737656805, "ROI (%)": 7.587799816000169, "cluster": 3, "competencia": 93, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.2737577462041715, "indice_oportunidad": 50.66134723413627, "neighbourhood": "SANTS", "ocupacion": 0.6159005811655072, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 2937.696286273895, "precio_medio": 324.8447573552673, "reviews_score": 4.962447294942111, "roi_prevision_1y": 5.632065811347721, "roi_prevision_3y": 6.196646005071802}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1334000000000004, 41.3751], [2.1534, 41.3751], [2.1534, 41.3951], [2.1334000000000004, 41.3951], [2.1334000000000004, 41.3751]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.4672360788274705, "ROI (%)": 11.62522284353982, "cluster": 3, "competencia": 121, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.2400313630778703, "indice_oportunidad": 49.01630897686249, "neighbourhood": "LES CORTS", "ocupacion": 0.5644885149016018, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 4473.592430635182, "precio_medio": 373.16588453417694, "reviews_score": 4.251782295825365, "roi_prevision_1y": 5.796738803359116, "roi_prevision_3y": 5.8774162094676425}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.154129490168752, 41.34656830451115], [2.1741294901687516, 41.34656830451115], [2.1741294901687516, 41.36656830451115], [2.154129490168752, 41.36656830451115], [2.154129490168752, 41.34656830451115]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.115950885216335, "ROI (%)": 12.751328233611146, "cluster": 3, "competencia": 119, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.32880167968367324, "indice_oportunidad": 47.486202783415905, "neighbourhood": "SANT GERVASI-GALVANY", "ocupacion": 0.5746280235544143, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 2769.1356835660445, "precio_medio": 401.7180021428117, "reviews_score": 4.502679023228861, "roi_prevision_1y": 5.260206784212478, "roi_prevision_3y": 5.510668451533375}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.183473918190766, 41.352805655235684], [2.2034739181907654, 41.352805655235684], [2.2034739181907654, 41.37280565523568], [2.183473918190766, 41.37280565523568], [2.183473918190766, 41.352805655235684]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 5.597390257266878, "ROI (%)": 5.884925020519195, "cluster": 3, "competencia": 178, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.21182413671870345, "indice_oportunidad": 49.81868327782369, "neighbourhood": "CAMP D\u0027EN GRASSOT I GR\u00c0CIA NOVA", "ocupacion": 0.6272013899887455, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 4259.882794248423, "precio_medio": 327.10467041313103, "reviews_score": 4.144894872091223, "roi_prevision_1y": 5.7953834774074, "roi_prevision_3y": 6.107510604175515}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.190806363729278, 41.36289790070773], [2.2108063637292776, 41.36289790070773], [2.2108063637292776, 41.382897900707725], [2.190806363729278, 41.382897900707725], [2.190806363729278, 41.36289790070773]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 8.73931655089634, "ROI (%)": 5.45227288910538, "cluster": 3, "competencia": 77, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.39908750955896555, "indice_oportunidad": 76.82111125457574, "neighbourhood": "CAN BAR\u00d3", "ocupacion": 0.5911740650167767, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 2763.0492891219183, "precio_medio": 297.31304706675365, "reviews_score": 4.9856504541106, "roi_prevision_1y": 8.956887524187986, "roi_prevision_3y": 9.297193525484616}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.1927444280220145, 41.36886264927547], [2.212744428022014, 41.36886264927547], [2.212744428022014, 41.38886264927547], [2.1927444280220145, 41.38886264927547], [2.1927444280220145, 41.36886264927547]]], "type": "Polygon"}, "properties": {"Net ROI (%)": 4.371603301759982, "ROI (%)": 8.253303307632644, "cluster": 3, "competencia": 42, "corr_competencia": 0.4215068519882934, "corr_ocupacion": 0.15026368100988555, "corr_precio_m2": 0.12372640370740813, "estacionalidad": 0.4812287388095813, "indice_oportunidad": 42.70306829567014, "neighbourhood": "EL GUINARD\u00d3", "ocupacion": 0.6708431154505026, "perfil_inversion": "Premium/Alta inversi\u00f3n", "precio_m2": 2679.5433869157237, "precio_medio": 417.34827418605045, "reviews_score": 4.2420552715115, "roi_prevision_1y": 4.460395337588498, "roi_prevision_3y": 4.6482144994650705}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_aca9d3394ca5aa61d87fd182651e4164.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["neighbourhood", "perfil_inversion", "Net ROI (%)", "precio_m2", "ocupacion"];
+    let aliases = ["Barrio:", "Perfil:", "ROI Neto (%):", "Precio por m\u00b2 (\u20ac):", "Ocupaci\u00f3n:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            var marker_61586fdf0f6cff8962de19fb55540527 = L.marker(
+                [41.41, 2.12],
+                {
+}
+            ).addTo(map_6a7675aa24d9a0e4df386e7ef714462a);
+        
+    
+            var icon_b32ca69e7f2bf25e950eff0c4b7af9fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#440154",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03622378129989b86b2a50454d0a007f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_51b71cc7cd91fd3e885c707453c4176f = $(`<div id="html_51b71cc7cd91fd3e885c707453c4176f" style="width: 100.0%; height: 100.0%;">         <div style="width:300px; font-family:Arial; font-size:12px;">             <h3 style="color:#440154;">Alto rendimiento/Alto riesgo</h3>             <hr>             <p><b>Número de barrios:</b> 4</p>             <p><b>ROI Neto medio:</b> 10.09%</p>             <p><b>Precio por m² medio:</b> 3131€</p>             <p><b>Ocupación media:</b> 76.9%</p>             <p><b>Competencia media:</b> 180 anuncios</p>             <hr>             <p><b>Características:</b> Alto ROI con mayor riesgo. Buena rentabilidad pero mercados más volátiles.</p>         </div>         </div>`)[0];
+                popup_03622378129989b86b2a50454d0a007f.setContent(html_51b71cc7cd91fd3e885c707453c4176f);
+            
+        
+
+        marker_61586fdf0f6cff8962de19fb55540527.bindPopup(popup_03622378129989b86b2a50454d0a007f)
+        ;
+
+        
+    
+    
+            marker_61586fdf0f6cff8962de19fb55540527.bindTooltip(
+                `<div>
+                     Información: Alto rendimiento/Alto riesgo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_61586fdf0f6cff8962de19fb55540527.setIcon(icon_b32ca69e7f2bf25e950eff0c4b7af9fa);
+            
+    
+            var marker_b893479e4b66732bb94e65a8fb9ed176 = L.marker(
+                [41.41, 2.22],
+                {
+}
+            ).addTo(map_6a7675aa24d9a0e4df386e7ef714462a);
+        
+    
+            var icon_118982e30aafb697fd3975115b11f95f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#3b528b",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c17e039da5189d75c7e2a9a8b800036 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8c38540eedf7a3a36c447896f91c418c = $(`<div id="html_8c38540eedf7a3a36c447896f91c418c" style="width: 100.0%; height: 100.0%;">         <div style="width:300px; font-family:Arial; font-size:12px;">             <h3 style="color:#3b528b;">Rendimiento estable/Bajo riesgo</h3>             <hr>             <p><b>Número de barrios:</b> 9</p>             <p><b>ROI Neto medio:</b> 7.38%</p>             <p><b>Precio por m² medio:</b> 4225€</p>             <p><b>Ocupación media:</b> 80.7%</p>             <p><b>Competencia media:</b> 111 anuncios</p>             <hr>             <p><b>Características:</b> Equilibrio entre rentabilidad y estabilidad. Buena opción para inversores moderados.</p>         </div>         </div>`)[0];
+                popup_6c17e039da5189d75c7e2a9a8b800036.setContent(html_8c38540eedf7a3a36c447896f91c418c);
+            
+        
+
+        marker_b893479e4b66732bb94e65a8fb9ed176.bindPopup(popup_6c17e039da5189d75c7e2a9a8b800036)
+        ;
+
+        
+    
+    
+            marker_b893479e4b66732bb94e65a8fb9ed176.bindTooltip(
+                `<div>
+                     Información: Rendimiento estable/Bajo riesgo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b893479e4b66732bb94e65a8fb9ed176.setIcon(icon_118982e30aafb697fd3975115b11f95f);
+            
+    
+            var marker_5d4ad89ef2e754850c2e69504f5e03d0 = L.marker(
+                [41.36, 2.22],
+                {
+}
+            ).addTo(map_6a7675aa24d9a0e4df386e7ef714462a);
+        
+    
+            var icon_b84bb7eade444b6b1f9207d3c6ef18d4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#21918c",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0db4223e9a5af68113432f17fc8a0cdb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_276496f85ee84d971b3f8ed7b252ad5e = $(`<div id="html_276496f85ee84d971b3f8ed7b252ad5e" style="width: 100.0%; height: 100.0%;">         <div style="width:300px; font-family:Arial; font-size:12px;">             <h3 style="color:#21918c;">Bajo rendimiento/Bajo riesgo</h3>             <hr>             <p><b>Número de barrios:</b> 5</p>             <p><b>ROI Neto medio:</b> 9.86%</p>             <p><b>Precio por m² medio:</b> 4721€</p>             <p><b>Ocupación media:</b> 59.4%</p>             <p><b>Competencia media:</b> 158 anuncios</p>             <hr>             <p><b>Características:</b> Menor rentabilidad pero mayor seguridad. Ideal para inversores conservadores.</p>         </div>         </div>`)[0];
+                popup_0db4223e9a5af68113432f17fc8a0cdb.setContent(html_276496f85ee84d971b3f8ed7b252ad5e);
+            
+        
+
+        marker_5d4ad89ef2e754850c2e69504f5e03d0.bindPopup(popup_0db4223e9a5af68113432f17fc8a0cdb)
+        ;
+
+        
+    
+    
+            marker_5d4ad89ef2e754850c2e69504f5e03d0.bindTooltip(
+                `<div>
+                     Información: Bajo rendimiento/Bajo riesgo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5d4ad89ef2e754850c2e69504f5e03d0.setIcon(icon_b84bb7eade444b6b1f9207d3c6ef18d4);
+            
+    
+            var marker_f3e18df0c93c9decba9691d2ea344750 = L.marker(
+                [41.36, 2.12],
+                {
+}
+            ).addTo(map_6a7675aa24d9a0e4df386e7ef714462a);
+        
+    
+            var icon_bb5c6491a0e1715c8792d06d37839e85 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#5ec962",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c6b67eb0d2a5860373d84256d6c9580 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7a945cf1aef76f3bbcbc62ec440ae6bf = $(`<div id="html_7a945cf1aef76f3bbcbc62ec440ae6bf" style="width: 100.0%; height: 100.0%;">         <div style="width:300px; font-family:Arial; font-size:12px;">             <h3 style="color:#5ec962;">Premium/Alta inversión</h3>             <hr>             <p><b>Número de barrios:</b> 12</p>             <p><b>ROI Neto medio:</b> 5.77%</p>             <p><b>Precio por m² medio:</b> 3673€</p>             <p><b>Ocupación media:</b> 61.1%</p>             <p><b>Competencia media:</b> 109 anuncios</p>             <hr>             <p><b>Características:</b> Propiedades premium en zonas exclusivas. Alta inversión inicial con retornos estables.</p>         </div>         </div>`)[0];
+                popup_2c6b67eb0d2a5860373d84256d6c9580.setContent(html_7a945cf1aef76f3bbcbc62ec440ae6bf);
+            
+        
+
+        marker_f3e18df0c93c9decba9691d2ea344750.bindPopup(popup_2c6b67eb0d2a5860373d84256d6c9580)
+        ;
+
+        
+    
+    
+            marker_f3e18df0c93c9decba9691d2ea344750.bindTooltip(
+                `<div>
+                     Información: Premium/Alta inversión
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f3e18df0c93c9decba9691d2ea344750.setIcon(icon_bb5c6491a0e1715c8792d06d37839e85);
+            
+    
+            var layer_control_f01230826698955135dc2bfe968ccd88_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_1d445a4889f0065d9e8fe650580c05d1,
+                },
+                overlays :  {
+                    "Perfiles de Inversi\u00f3n" : choropleth_7b4b2b3202e74ee29126e29eae6d2491,
+                    "Perfil: Alto rendimiento/Alto riesgo" : geo_json_42af39aab0da127898fa22d769ce0162,
+                    "Perfil: Rendimiento estable/Bajo riesgo" : geo_json_d01b4386a64fcab01df9cb83f295208f,
+                    "Perfil: Bajo rendimiento/Bajo riesgo" : geo_json_4aa210d6961a2af971df8e0437196072,
+                    "Perfil: Premium/Alta inversi\u00f3n" : geo_json_aca9d3394ca5aa61d87fd182651e4164,
+                },
+            };
+            let layer_control_f01230826698955135dc2bfe968ccd88 = L.control.layers(
+                layer_control_f01230826698955135dc2bfe968ccd88_layers.base_layers,
+                layer_control_f01230826698955135dc2bfe968ccd88_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_6a7675aa24d9a0e4df386e7ef714462a);
+
+        
+</script>
+</html>
